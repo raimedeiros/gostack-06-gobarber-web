@@ -28,12 +28,13 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
 
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
+
     /* if (inputRef.current?.value) {
       setIsFilled(true);
     } else {
       setIsFilled(false);
     } */
-    // transforma o resultado em boolean
+    // transforma o resultado em boolean:
     setIsFilled(!!inputRef.current?.value);
   }, []);
   useEffect(() => {
