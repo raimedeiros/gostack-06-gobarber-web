@@ -30,7 +30,7 @@ const Toast: React.FC<ToastProps> = ({ message }) => {
     // se eu retorno uma função, ela é executada automaticamente quando o compoentne deixa de existir.
     // Usado para controlar a função caso o toast ja tenha sido removido
     return () => {
-      clearTimeout(time);
+      clearTimeout(timer);
     };
   }, [message.id, removeToast]);
 
